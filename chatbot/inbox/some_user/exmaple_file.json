@@ -1,0 +1,46 @@
+{
+  "participants": [
+    {
+      "name": "Younes Dagana"
+    },
+    {
+      "name": "Adam Clark"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Younes",
+      "timestamp_ms": 1562950756642,
+      "content": "Sure",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Adam",
+      "timestamp_ms": 1562950546465,
+      "content": "Could you please guide me a little, I've been thinking about the questions I posted for sometime. I found some answer online, but they weren't satisfactory explained.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Younes",
+      "timestamp_ms": 1562950517295,
+      "content": "Hi",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Adam",
+      "timestamp_ms": 1562950472947,
+      "content": "Hey, there, bro.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Adam",
+      "timestamp_ms": 1562950466257,
+      "content": "Say hi to your new Facebook friend, Younes.",
+      "type": "Generic"
+    }
+  ],
+  "title": "Younes",
+  "is_still_participant": true,
+  "thread_type": "Regular",
+  "thread_path": "inbox/Younes_XawjPENv3w"
+}
