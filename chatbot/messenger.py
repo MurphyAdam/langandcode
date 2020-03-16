@@ -12,8 +12,8 @@ class LangandCodeBot(object):
     def __init__(self, bot_name, basedir=basedir):
         self.slash = '/'
         self.basedir = basedir
-        self.path_to_messenger = basedir+self.slash+'inbox'
-        self.sub_directories = [ f.name for f in os.scandir(self.path_to_messenger) if f.is_dir() ]
+        self.path_to_massanger = basedir+self.slash+'inbox'
+        self.sub_directories = [ f.name for f in os.scandir(self.path_to_massanger) if f.is_dir() ]
 
         self.bot = ChatBot(bot_name,
             logic_adapters=[
@@ -32,9 +32,9 @@ class LangandCodeBot(object):
         self.list_trainer = ListTrainer(self.bot)
 
 
-    def get_messenger_files(self, directory):
+    def get_massanger_files(self, directory):
         return sorted([f.name for f in os.scandir(
-            self.path_to_messenger+self.slash+directory) if f.is_file() ])
+            self.path_to_massanger+self.slash+directory) if f.is_file() ])
 
 
     def load_json(self, path):
@@ -59,13 +59,13 @@ class LangandCodeBot(object):
         return chat
 
 
-    def train_messenger_corpus(self):
+    def train_massanger_corpus(self):
         for d in self.sub_directories:
             print("Loading directory", d)
-            for f in reversed(self.get_messenger_files(d)):
+            for f in reversed(self.get_massanger_files(d)):
                 print("Processing file", f)
                 chat = self.parse_json(
-                    self.load_json(self.path_to_messenger+self.slash+d+self.slash+f
+                    self.load_json(self.path_to_massanger+self.slash+d+self.slash+f
                     )
                 )
                 print("Finished processing file", f)
@@ -94,5 +94,5 @@ class LangandCodeBot(object):
 
 
 bot = LangandCodeBot("Adam")
-bot.train_messenger_corpus()
+bot.train_massanger_corpus()
 bot.console_run_bot()
